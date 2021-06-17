@@ -1,0 +1,15 @@
+<center>
+    <h1> This time, you answered <%= @final_score %> questions correctly </h1> <br><br>
+
+    <% if @history_array %>
+        <% @history_array.each do |h| %>
+            <% array = h.split("#") %>
+                At <%= array[0] %>, you answered <%= array[1] %> questions correctly
+            <br>
+        <% end %>
+    <% end %>
+
+
+    <br><br>
+    <a href="/home"> <button type="submit" class="btn btn-default">Reload</button> </a>
+</center>

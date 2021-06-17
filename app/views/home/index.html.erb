@@ -1,0 +1,84 @@
+<center>
+   <h2> Welcome to Quiz+ </h2> <br><br>
+    <form method="POST" action="/quiz">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <button type="submit" class="btn btn-default">Begin Test</button>
+        <br>
+        <br>
+        <br>
+        Choose number of questions <br><br>
+        <select name="num" id="num">
+            <% if @categorySet == nil %>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            <% else %>
+                <% if @numSet == "4" %>
+                    <option value="4" selected>4</option>
+                <% else %>
+                    <option value="4">4</option>
+                <% end %>
+                <% if @numSet == "5" %>
+                    <option value="5" selected>5</option>
+                <% else %>
+                    <option value="5">5</option>
+                <% end %>
+                <% if @numSet == "6" %>
+                    <option value="6" selected>6</option>
+                <% else %>
+                    <option value="6">6</option>
+                <% end %>
+                <% if @numSet == "7" %>
+                    <option value="7" selected>7</option>
+                <% else %>
+                    <option value="7">7</option>
+                <% end %>
+                <% if @numSet == "8" %>
+                    <option value="8" selected>8</option>
+                <% else %>
+                    <option value="8">8</option>
+                <% end %>
+            <% end %>
+        </select>
+        <br>
+        <br>
+        Choose a category (optional) <br><br>
+        <select name="category" id="category">
+            <% if @categorySet == nil %>
+                <option value="none" selected>--</option>
+                <option value="Linux">Linux</option>
+                <option value="DevOps">DevOps</option>
+                <option value="Networking">Networking</option>
+                <option value="Programming">Programming</option>
+            <% else %>
+                <% if @categorySet == "none" %>
+                    <option value="none" selected>--</option>
+                <% else %>
+                    <option value="none">--</option>
+                <% end %>
+                <% if @categorySet == "Linux" %>
+                    <option value="Linux" selected>Linux</option>
+                <% else %>
+                    <option value="Linux">Linux</option>
+                <% end %>
+                <% if @categorySet == "DevOps" %>
+                    <option value="DevOps" selected>DevOps</option>
+                <% else %>
+                    <option value="DevOps">DevOps</option>
+                <% end %>
+                <% if @categorySet == "Networking" %>
+                    <option value="Networking" selected>Networking</option>
+                <% else %>
+                    <option value="Networking">Networking</option>
+                <% end %>
+                <% if @categorySet == "Programming" %>
+                    <option value="Programming" selected>Programming</option>
+                <% else %>
+                    <option value="Programming">Programming</option>
+                <% end %>
+            <% end %>
+        </select>
+    </form>
+</center>

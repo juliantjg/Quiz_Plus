@@ -1,0 +1,19 @@
+<center>
+    <h5> <%= @message %> <%= @the_question.category %> <%= @the_question.id %> </h5>
+    <br>
+
+    <h3> <%= @the_question.question_form %>  </h3>
+    <br>
+    
+    <form method="POST" action="/submit">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <input type="hidden" name="question_id" value="<%= @id %>">
+        <% @answers.each do |answer| %>
+            <input type="radio" id="<%= answer %>" name="choice" value="<%= answer %>">
+            <label for="<%= answer %>"> <%= answer %> </label><br>
+        <% end %>
+        <br>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+   
+</center>
