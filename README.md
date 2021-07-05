@@ -1,24 +1,8 @@
-# README
+# Quiz+
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Deployed app URL: https://quizplus-s3786866.herokuapp.com/
 
-Things you may want to cover:
+## Overview
 
-* Ruby version
+A Ruby on Rails quiz application with questions fetched from https://quizapi.io/.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
